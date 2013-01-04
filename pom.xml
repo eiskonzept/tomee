@@ -10,7 +10,6 @@
     <packaging>war</packaging>
     <name>test</name>
     <dependencies>
-
         <dependency>
             <groupId>org.apache.openwebbeans</groupId>
             <artifactId>openwebbeans-impl</artifactId>
@@ -98,9 +97,9 @@
                         <artifactId>tomee-maven-plugin</artifactId>
                         <version>1.0.1</version>
                         <configuration>
-                            <tomeeVersion>1.5.2-20130103.040941-21</tomeeVersion>
+                            <tomeeVersion>1.5.2-20130104.041348-22</tomeeVersion>
                             <tomeeClassifier>webprofile</tomeeClassifier>
-                            <args>-Dopenejb.session-context=http -Xmx512m -XX:PermSize=256m</args>
+                            <args>-Dtomee.session-context.wrapper=http -Dopenejb.session-context=http -Xmx512m -XX:PermSize=256m</args>
                             <tomeeShutdownPort>8015</tomeeShutdownPort>
                             <config>src/main/tomee1/conf</config>
                             <removeDefaultWebapps>false</removeDefaultWebapps>
@@ -124,9 +123,9 @@
                         <artifactId>tomee-maven-plugin</artifactId>
                         <version>1.0.1</version>
                         <configuration>
-                            <tomeeVersion>1.5.2-20130103.040941-21</tomeeVersion>
+                            <tomeeVersion>1.5.2-20130104.041348-22</tomeeVersion>
                             <tomeeClassifier>webprofile</tomeeClassifier>
-                            <args>-Dopenejb.session-context=http -Xmx512m -XX:PermSize=256m</args>
+                            <args>-Dtomee.session-context.wrapper=http -Xmx512m -XX:PermSize=256m</args>
                             <tomeeShutdownPort>8016</tomeeShutdownPort>
                             <tomeeHttpPort>8081</tomeeHttpPort>
                             <config>src/main/tomee2/conf</config>
@@ -140,6 +139,46 @@
                     </plugin>
                 </plugins>
             </build>
+        </profile>
+        <profile>
+            <id>tomcat</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.apache.openwebbeans</groupId>
+                    <artifactId>openwebbeans-jsf</artifactId>
+                    <version>1.1.7</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.myfaces.extensions.cdi.modules.jee5-support</groupId>
+                    <artifactId>myfaces-extcdi-jee5-openwebbeans-support</artifactId>
+                    <version>1.0.5</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.myfaces.core</groupId>
+                    <artifactId>myfaces-api</artifactId>
+                    <version>2.1.9</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.myfaces.core</groupId>
+                    <artifactId>myfaces-impl</artifactId>
+                    <version>2.1.9</version>
+                </dependency>
+                <!--<dependency>
+                    <groupId>org.jboss.spec.javax.annotation</groupId>
+                    <artifactId>jboss-annotations-api_1.1_spec</artifactId>
+                    <version>1.0.0.Final</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.jboss.spec.javax.ejb</groupId>
+                    <artifactId>jboss-ejb-api_3.1_spec</artifactId>
+                    <version>1.0.1.Final</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.jboss.spec.javax.interceptor</groupId>
+                    <artifactId>jboss-interceptors-api_1.1_spec</artifactId>
+                    <version>1.0.0.Final</version>
+                </dependency>-->
+            </dependencies>
         </profile>
     </profiles>
 </project>
