@@ -35,10 +35,11 @@
   </GlobalNamingResources>
   <Service name="Catalina">
 
-    <Connector port="8080" protocol="HTTP/1.1"
+      <Connector port="10030" protocol="AJP/1.3" redirectPort="-1"/>
+      <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443" />
-    <Engine name="Catalina" defaultHost="localhost">
+      <Engine name="Catalina" defaultHost="localhost" jvmRoute="showcase_node1">
 
       <Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"/>
 

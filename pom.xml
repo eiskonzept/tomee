@@ -97,17 +97,22 @@
                         <artifactId>tomee-maven-plugin</artifactId>
                         <version>1.0.1</version>
                         <configuration>
-                            <tomeeVersion>1.5.2-20130104.041348-22</tomeeVersion>
+                            <tomeeVersion>1.5.2-SNAPSHOT</tomeeVersion>
                             <tomeeClassifier>webprofile</tomeeClassifier>
-                            <args>-Dtomee.session-context.wrapper=http -Dopenejb.session-context=http -Xmx512m -XX:PermSize=256m</args>
+                            <args>-Dopenejb.session-context=http -Xmx512m -XX:PermSize=256m</args>
                             <tomeeShutdownPort>8015</tomeeShutdownPort>
+                            <tomeeAjpPort>10030</tomeeAjpPort>
                             <config>src/main/tomee1/conf</config>
                             <removeDefaultWebapps>false</removeDefaultWebapps>
                             <quickSession>false</quickSession>
-                            <!--<libs>
+                            <libs>
                                 <lib>org.hibernate:hibernate-core:3.6.10.Final</lib>
                                 <lib>org.hibernate:hibernate-entitymanager:3.6.10.Final</lib>
-                            </libs>-->
+                                <lib>org.hibernate:hibernate-commons-annotations:3.2.0.Final</lib>
+                                <lib>antlr:antlr:2.7.6</lib>
+                                <lib>dom4j:dom4j:1.6.1</lib>
+                                <lib>javassist:javassist:3.12.0.GA</lib>
+                            </libs>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -123,18 +128,23 @@
                         <artifactId>tomee-maven-plugin</artifactId>
                         <version>1.0.1</version>
                         <configuration>
-                            <tomeeVersion>1.5.2-20130104.041348-22</tomeeVersion>
+                            <tomeeVersion>1.5.2-SNAPSHOT</tomeeVersion>
                             <tomeeClassifier>webprofile</tomeeClassifier>
-                            <args>-Dtomee.session-context.wrapper=http -Xmx512m -XX:PermSize=256m</args>
+                            <args>-Dopenejb.session-context=http -Xmx512m -XX:PermSize=256m</args>
                             <tomeeShutdownPort>8016</tomeeShutdownPort>
                             <tomeeHttpPort>8081</tomeeHttpPort>
+                            <tomeeAjpPort>10040</tomeeAjpPort>
                             <config>src/main/tomee2/conf</config>
                             <removeDefaultWebapps>false</removeDefaultWebapps>
                             <quickSession>false</quickSession>
-                            <!--<libs>
+                            <libs>
                                 <lib>org.hibernate:hibernate-core:3.6.10.Final</lib>
                                 <lib>org.hibernate:hibernate-entitymanager:3.6.10.Final</lib>
-                            </libs>-->
+                                <lib>org.hibernate:hibernate-commons-annotations:3.2.0.Final</lib>
+                                <lib>antlr:antlr:2.7.6</lib>
+                                <lib>dom4j:dom4j:1.6.1</lib>
+                                <lib>javassist:javassist:3.12.0.GA</lib>
+                            </libs>
                         </configuration>
                     </plugin>
                 </plugins>

@@ -13,8 +13,8 @@ public class PassivationCapableBean implements Serializable {
     private String stringValue;
     private Integer intValue;
 
-    //@EJB
-    //private EjbBeanIntf ejbBean;
+    @EJB
+    private EjbBeanIntf ejbBean;
 
     public String getStringValue() {
         return stringValue;
