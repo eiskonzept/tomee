@@ -1,2 +1,4 @@
-start mvn clean package tomee:start -P node1
-start mvn clean package tomee:start -P node2
+call mvn clean package
+start mvn tomee:run -P node1
+start mvn tomee:run -P node2
+rem exit
