@@ -1,5 +1,7 @@
 package de.test;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.myfaces.extensions.cdi.core.api.scope.conversation.WindowScoped;
 
 import javax.ejb.EJB;
@@ -10,8 +12,11 @@ import java.io.Serializable;
 @WindowScoped
 public class PassivationCapableBean implements Serializable {
 
+    private transient static Log log = LogFactory.getLog(PassivationCapableBean.class);
+
     private String stringValue;
     private Integer intValue;
+
 
     @EJB
     private EjbBeanIntf ejbBean;
@@ -33,7 +38,7 @@ public class PassivationCapableBean implements Serializable {
     }
 
     public String submit(){
-        System.out.println("test");
+        log.error("Test!");
         return null;
     }
 }

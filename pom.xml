@@ -11,6 +11,16 @@
     <name>test</name>
     <dependencies>
         <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.openwebbeans</groupId>
             <artifactId>openwebbeans-impl</artifactId>
             <version>1.1.7</version>
@@ -85,7 +95,6 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
     <profiles>
         <profile>
             <id>node1</id>
@@ -100,7 +109,7 @@
                             <tomeeVersion>1.5.2-SNAPSHOT</tomeeVersion>
                             <tomeeClassifier>webprofile</tomeeClassifier>
                             <catalinaBase>${project.build.directory}/instance1</catalinaBase>
-                            <args>-Dopenejb.session-context=http -Xmx512m -XX:PermSize=256m</args>
+                            <args>-Dopenejb.session-context=http -Xmx512m -XX:PermSize=256m -Dopenejb.skip.log4j=false</args>
                             <tomeeShutdownPort>8015</tomeeShutdownPort>
                             <tomeeAjpPort>10030</tomeeAjpPort>
                             <config>src/main/tomee1/conf</config>
@@ -112,6 +121,7 @@
                                 <lib>org.hibernate:hibernate-commons-annotations:3.2.0.Final</lib>
                                 <lib>antlr:antlr:2.7.6</lib>
                                 <lib>dom4j:dom4j:1.6.1</lib>
+                                <!--<lib>log4j:log4j:1.2.17</lib>-->
                             </libs>
                         </configuration>
                     </plugin>
