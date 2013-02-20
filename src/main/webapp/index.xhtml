@@ -7,6 +7,7 @@
     <h:form id="f">
         Int: <h:inputText value="#{passivationCapableBean.intValue}"/>
         String: <h:inputText value="#{passivationCapableBean.stringValue}"/>
+        Session scoped string: <h:inputText value="#{sessionScopedBean.sessionString}"/>
         <h:commandButton value="Submit" action="#{passivationCapableBean.submit}"/>
         <h:link value="No submit"/>
     </h:form>
