@@ -3,7 +3,7 @@
 
     <Resource id="jdbc/testDS" type="javax.sql.DataSource">
         JdbcDriver org.hsqldb.jdbcDriver
-        JdbcUrl jdbc:hsqldb:file:test.db
+        JdbcUrl jdbc:hsqldb:file:test.db;hsqldb.lock_file=false
         UserName sa
         Password
         JtaManaged true
@@ -12,7 +12,7 @@
 
     <Resource id="jdbc/testDSNonJta" type="javax.sql.DataSource">
         JdbcDriver org.hsqldb.jdbcDriver
-        JdbcUrl jdbc:hsqldb:file:test.db
+        JdbcUrl jdbc:hsqldb:file:test.db;hsqldb.lock_file=false
         UserName sa
         Password
         JtaManaged false
