@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomee>
+
+    <Resource id="jdbc/testDS" type="javax.sql.DataSource">
+        JdbcDriver org.hsqldb.jdbcDriver
+        JdbcUrl jdbc:hsqldb:file:test.db
+        UserName sa
+        Password
+        JtaManaged true
+        ConnectionProperties
+    </Resource>
+
+    <Resource id="jdbc/testDSNonJta" type="javax.sql.DataSource">
+        JdbcDriver org.hsqldb.jdbcDriver
+        JdbcUrl jdbc:hsqldb:file:test.db
+        UserName sa
+        Password
+        JtaManaged false
+        ConnectionProperties
+    </Resource>
+
+</tomee>

@@ -1,18 +1,18 @@
 <resources>
-	  <Resource id="datasource" type="javax.sql.DataSource">
+  <Resource id="jdbc\testDS" type="javax.sql.DataSource">
 	  JdbcDriver org.hsqldb.jdbcDriver
-	  JdbcUrl jdbc:hsqldb:mem:SAD4
+	  JdbcUrl jdbc:hsqldb:file:test.db
 	  UserName sa
-	  Password 
+	  Password
 	  JtaManaged true
 	  ConnectionProperties
 	</Resource>
 
-	<Resource id="datasourceNonJta" type="javax.sql.DataSource">
+	<Resource id="jdbc\testDSNonJta" type="javax.sql.DataSource">
 	  JdbcDriver org.hsqldb.jdbcDriver
-	  JdbcUrl jdbc:hsqldb:mem:SAD4
+	  JdbcUrl jdbc:hsqldb:file:test.db
 	  UserName sa
-	  Password 
+	  Password
 	  JtaManaged false
 	  ConnectionProperties
 	</Resource>

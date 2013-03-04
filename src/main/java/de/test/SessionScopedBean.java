@@ -14,6 +14,10 @@ import java.io.Serializable;
 public class SessionScopedBean implements Serializable {
     private String sessionString;
 
+    public static void staticMethod() {
+        System.out.println("Static Method");
+    }
+
     public String getSessionString() {
         return sessionString;
     }

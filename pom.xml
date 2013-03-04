@@ -16,9 +16,22 @@
             <version>1.1.1</version>
         </dependency>
         <dependency>
+            <groupId>org.jboss.spec.javax.servlet</groupId>
+            <artifactId>jboss-servlet-api_3.0_spec</artifactId>
+            <version>1.0.0.Final</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
-            <version>2.0</version>
+            <version>2.6</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
@@ -99,6 +112,12 @@
             <version>1.0-SP4</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>3.6.10.Final</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
     <profiles>
         <profile>
@@ -111,7 +130,7 @@
                         <artifactId>tomee-maven-plugin</artifactId>
                         <version>1.5.2-SNAPSHOT</version>
                         <configuration>
-                            <tomeeVersion>1.5.2-SNAPSHOT</tomeeVersion>
+                            <tomeeVersion>1.6.0-SNAPSHOT</tomeeVersion>
                             <tomeeClassifier>webprofile</tomeeClassifier>
                             <catalinaBase>${project.build.directory}/instance1</catalinaBase>
                             <args>-Dopenejb.session-context=http -Dtomee.session-context.wrapper=http -Xmx512m -XX:PermSize=256m</args>
@@ -121,6 +140,7 @@
                             <config>src/main/tomee1/conf</config>
                             <removeDefaultWebapps>false</removeDefaultWebapps>
                             <quickSession>false</quickSession>
+                            <reloadOnUpdate>true</reloadOnUpdate>
                             <libs>
                                 <lib>org.hibernate:hibernate-core:3.6.10.Final</lib>
                                 <lib>org.hibernate:hibernate-entitymanager:3.6.10.Final</lib>
@@ -144,7 +164,7 @@
                         <artifactId>tomee-maven-plugin</artifactId>
                         <version>1.5.2-SNAPSHOT</version>
                         <configuration>
-                            <tomeeVersion>1.5.2-SNAPSHOT</tomeeVersion>
+                            <tomeeVersion>1.6.0-SNAPSHOT</tomeeVersion>
                             <tomeeClassifier>webprofile</tomeeClassifier>
                             <catalinaBase>${project.build.directory}/instance2</catalinaBase>
                             <args>-Dopenejb.session-context=http -Dtomee.session-context.wrapper=http -Xmx512m -XX:PermSize=256m</args>
@@ -154,6 +174,7 @@
                             <config>src/main/tomee2/conf</config>
                             <removeDefaultWebapps>false</removeDefaultWebapps>
                             <quickSession>false</quickSession>
+                            <reloadOnUpdate>true</reloadOnUpdate>
                             <libs>
                                 <lib>org.hibernate:hibernate-core:3.6.10.Final</lib>
                                 <lib>org.hibernate:hibernate-entitymanager:3.6.10.Final</lib>

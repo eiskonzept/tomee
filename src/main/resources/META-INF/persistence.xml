@@ -6,8 +6,8 @@
 
     <persistence-unit name="DEFAULT" transaction-type="JTA">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
-        <jta-data-source>datasource</jta-data-source>
-        <non-jta-data-source>datasourceNonJta</non-jta-data-source>
+        <jta-data-source>jdbc\testDS</jta-data-source>
+        <non-jta-data-source>jdbc\testDSNonJta</non-jta-data-source>
         <properties>
             <property name="hibernate.generate_statistics" value="true"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
