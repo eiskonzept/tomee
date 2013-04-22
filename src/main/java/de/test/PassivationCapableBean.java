@@ -18,11 +18,8 @@ import java.io.Serializable;
 @WindowScoped
 public class PassivationCapableBean implements Serializable {
 
-    private transient static Log log = LogFactory.getLog(PassivationCapableBean.class);
-
     private String stringValue;
     private Integer intValue;
-
 
     @EJB
     private EjbBeanIntf ejbBean;
@@ -44,16 +41,7 @@ public class PassivationCapableBean implements Serializable {
     }
 
     public String submit(){
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        SerializationUtils.serialize(new DefaultRequestTypeResolver(), byteArrayOutputStream);
-        byte[] bytes = byteArrayOutputStream.toByteArray();
-        try {
-            byteArrayOutputStream.close();
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-        Object deserialize = SerializationUtils.deserialize(bytes);
-        System.out.println(deserialize);
+        System.out.println("submit");
         return null;
     }
 }

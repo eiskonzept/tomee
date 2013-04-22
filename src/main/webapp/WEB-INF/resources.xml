@@ -1,5 +1,5 @@
 <resources>
-  <Resource id="jdbc\testDS" type="javax.sql.DataSource">
+  <!--<Resource id="jdbc\testDS" type="javax.sql.DataSource">
 	  JdbcDriver org.hsqldb.jdbcDriver
 	  JdbcUrl jdbc:hsqldb:file:test.db
 	  UserName sa
@@ -15,5 +15,5 @@
 	  Password
 	  JtaManaged false
 	  ConnectionProperties
-	</Resource>
+	</Resource>-->
 </resources>

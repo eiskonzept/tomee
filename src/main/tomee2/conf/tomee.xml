@@ -18,5 +18,5 @@
         JtaManaged false
         ConnectionProperties
     </Resource>
-</tomee>
 
+</tomee>
