@@ -1,5 +1,6 @@
 package de.test;
 
+import de.test.cdi.Intercepted;
 import org.apache.commons.lang.SerializationUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -16,6 +17,7 @@ import java.io.Serializable;
 
 @Named
 @WindowScoped
+@Intercepted
 public class PassivationCapableBean implements Serializable {
 
     private String stringValue;

@@ -4,7 +4,7 @@
         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
                            http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd"
         version="3.1">
-    <enterprise-beans>
+    <!--<enterprise-beans>
         <session>
             <ejb-name>ProjectStage</ejb-name>
             <env-entry>
@@ -13,5 +13,5 @@
                 <env-entry-value>Development</env-entry-value>
             </env-entry>
         </session>
-    </enterprise-beans>
+    </enterprise-beans>-->
 </ejb-jar>
