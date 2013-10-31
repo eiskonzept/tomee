@@ -13,10 +13,8 @@ import java.io.Serializable;
  * Date: 06.08.13
  * Time: 10:43
  */
-@ApplicationScoped
 @Interceptor
 @Intercepted
-@Default
 public class TestInterceptor implements Serializable {
 
     @Inject
