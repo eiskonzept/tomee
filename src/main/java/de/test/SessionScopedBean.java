@@ -1,6 +1,7 @@
 package de.test;
 
 import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 
@@ -12,6 +13,9 @@ import java.io.Serializable;
 @Named
 @SessionScoped
 public class SessionScopedBean implements Serializable {
+    @Inject
+    private PassivationCapableBean passivationCapableBean;
+
     private String sessionString;
 
     public static void staticMethod() {
