@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Named
-@SessionScoped
+@WindowScoped
 public class PassivationCapableBean extends AbstractDelegatingMap implements Serializable {
 
     private String stringValue;

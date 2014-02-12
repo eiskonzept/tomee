@@ -107,9 +107,9 @@
                     <plugin>
                         <groupId>org.apache.openejb.maven</groupId>
                         <artifactId>tomee-maven-plugin</artifactId>
-                        <version>1.6.0-SNAPSHOT</version>
+                        <version>1.6.0</version>
                         <configuration>
-                            <tomeeVersion>1.6.0-SNAPSHOT</tomeeVersion>
+                            <tomeeVersion>1.6.0</tomeeVersion>
                             <tomeeClassifier>webprofile</tomeeClassifier>
                             <catalinaBase>${project.build.directory}/instance1</catalinaBase>
                             <args>-Dopenejb.session-context=http -Dtomee.session-context.wrapper=http -Xmx512m -XX:PermSize=256m</args>
@@ -122,6 +122,10 @@
                             <reloadOnUpdate>true</reloadOnUpdate>
                             <debug>false</debug>
                             <debugPort>8000</debugPort>
+                            <libs>
+                                <lib>remove:openwebbeans-impl</lib>
+                                <lib>org.apache.openwebbeans:openwebbeans-impl:1.2.1-SNAPSHOT</lib>
+                            </libs>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -135,9 +139,9 @@
                     <plugin>
                         <groupId>org.apache.openejb.maven</groupId>
                         <artifactId>tomee-maven-plugin</artifactId>
-                        <version>1.6.0-SNAPSHOT</version>
+                        <version>1.6.0</version>
                         <configuration>
-                            <tomeeVersion>1.6.0-SNAPSHOT</tomeeVersion>
+                            <tomeeVersion>1.6.0</tomeeVersion>
                             <tomeeClassifier>webprofile</tomeeClassifier>
                             <catalinaBase>${project.build.directory}/instance2</catalinaBase>
                             <args>-Dopenejb.session-context=http -Dtomee.session-context.wrapper=http -Xmx512m -XX:PermSize=256m</args>
@@ -148,6 +152,12 @@
                             <removeDefaultWebapps>false</removeDefaultWebapps>
                             <quickSession>false</quickSession>
                             <reloadOnUpdate>true</reloadOnUpdate>
+                            <debug>false</debug>
+                            <debugPort>8001</debugPort>
+                            <libs>
+                                <lib>remove:openwebbeans-impl</lib>
+                                <lib>org.apache.openwebbeans:openwebbeans-impl:1.2.1-SNAPSHOT</lib>
+                            </libs>
                         </configuration>
                     </plugin>
                 </plugins>
