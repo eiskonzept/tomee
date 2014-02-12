@@ -122,10 +122,6 @@
                             <reloadOnUpdate>true</reloadOnUpdate>
                             <debug>false</debug>
                             <debugPort>8000</debugPort>
-                            <libs>
-                                <lib>remove:openwebbeans-impl</lib>
-                                <lib>org.apache.openwebbeans:openwebbeans-impl:1.2.1-SNAPSHOT</lib>
-                            </libs>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -154,10 +150,6 @@
                             <reloadOnUpdate>true</reloadOnUpdate>
                             <debug>false</debug>
                             <debugPort>8001</debugPort>
-                            <libs>
-                                <lib>remove:openwebbeans-impl</lib>
-                                <lib>org.apache.openwebbeans:openwebbeans-impl:1.2.1-SNAPSHOT</lib>
-                            </libs>
                         </configuration>
                     </plugin>
                 </plugins>
