@@ -44,7 +44,6 @@ public class PassivationCapableBean extends AbstractDelegatingMap implements Ser
         this.stringValue = stringValue;
     }
 
-    @Intercepted
     public Integer getIntValue() {
         return intValue;
     }
